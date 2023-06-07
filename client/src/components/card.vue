@@ -1,11 +1,12 @@
 <template>
   <div
-    @click="handleDetail(pokes.entry_number)"
+    @click="$router.push(`detail/${pokes.entry_number}`)"
     class="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100"
   >
     <div class="flex space-x-4"></div>
     <div>
       <img
+        style="object-fit: contain"
         :src="imgUrl + pokes.entry_number + '.png'"
         class="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
         alt=""
@@ -49,16 +50,13 @@
 </template>
 
 <script>
+import { mapActions } from 'pinia'
+import { useCounterStore } from '../stores/counter'
 export default {
   props: ['pokes', 'imgUrl'],
   data() {
     return {
       pokeName: ''
-    }
-  },
-  methods: {
-    handleDetail(id) {
-      console.log(id)
     }
   }
 }

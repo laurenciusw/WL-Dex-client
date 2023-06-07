@@ -17,8 +17,45 @@
           @click="profileOpen = !profileOpen"
           class="h-9 w-9 overflow-hidden rounded-full"
         >
-          <img src="https://plchldr.co/i/40x40?bg=111111" alt="plchldr.co" />
+          <img
+            src="https://www.clipartmax.com/png/middle/251-2514739_drawn-pokeball-svg-black-and-white-pokeball.png"
+            alt="plchldr.co"
+          />
         </button>
+        <!-- dropdown profile -->
+        <div
+          class="absolute right-2 mt-1 w-48 divide-y divide-gray-200 rounded-md border border-gray-200 bg-white shadow-md"
+          :class="{ hidden: !profileOpen }"
+        >
+          <div class="flex items-center space-x-2 p-2">
+            <img
+              src="https://www.clipartmax.com/png/middle/251-2514739_drawn-pokeball-svg-black-and-white-pokeball.png"
+              alt="plchldr.co"
+              class="h-9 w-9 overflow-hidden rounded-full"
+            />
+            <div class="font-medium">Haii!</div>
+          </div>
+
+          <div class="p-2">
+            <button class="flex items-center space-x-2 transition hover:text-blue-600">
+              <svg
+                class="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                ></path>
+              </svg>
+              <div>Log Out</div>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
     <!-- aside -->
@@ -38,35 +75,22 @@
           href="#"
           class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
         >
-          <span class="text-2xl"><i class="bx bx-cart"></i></span>
-          <span>Cart</span>
-        </a>
-        <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-shopping-bag"></i></span>
-          <span>Shopping</span>
-        </a>
-        <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-heart"></i></span>
-          <span>My Favourite</span>
-        </a>
-        <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
           <span class="text-2xl"><i class="bx bx-user"></i></span>
-          <span>Profile</span>
+          <span>Trainer Account</span>
+        </a>
+        <a
+          @click.prevent="prepare"
+          href="#"
+          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
+        >
+          <span class="text-2xl"><i class="bx bx-captions"></i></span>
+          <span>Subscribe</span>
         </a>
       </aside>
 
       <!-- card -->
       <div
-        class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5"
+        class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-10"
       >
         <card v-for="poke in pokes" :key="poke.index" :pokes="poke" :imgUrl="imgUrl" />
       </div>
@@ -81,7 +105,8 @@ import { useCounterStore } from '../stores/counter'
 export default {
   data() {
     return {
-      asideOpen: true
+      asideOpen: true,
+      profileOpen: false
     }
   },
   components: {
@@ -91,7 +116,11 @@ export default {
     this.fetchHandler()
   },
   methods: {
-    ...mapActions(useCounterStore, ['fetchHandler'])
+    ...mapActions(useCounterStore, ['fetchHandler', 'generateToken']),
+    prepare() {
+      console.log(this.generateToken)
+      this.generateToken()
+    }
   },
   computed: {
     ...mapWritableState(useCounterStore, ['pokes', 'imgUrl'])
