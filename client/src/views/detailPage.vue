@@ -113,7 +113,7 @@
           <div
             class="max-w-sm min-w-[1200px] h-[780px] mx-auto justify-center border-4 content-center grid grid-cols-2 mt-8 bg-white shadow-2xl rounded-3xl col-span-1 p-4"
           >
-            <img :src="imgUrl + pokeId + '.png'" />
+            <img :src="imgUrl + pokemonId + '.png'" />
             <div class="ml-8">
               <div class="grid grid-cols-2">
                 <div>
@@ -134,7 +134,7 @@
               <div class="ml-14 mt-4" style="height: 170px; width: 170px"></div>
               <div>
                 <button
-                  @click="addBookmark($route.params.id)"
+                  @click.prevent="addpoke"
                   class="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold py-1 px-4 rounded-full shadow-lg mr-4 w-72 mt-3\ justify-center"
                   @mouseover="hover = 'red'"
                   @mouseleave="hover = 'white'"
@@ -196,10 +196,17 @@ export default {
     this.fetchDetail(this.$route.params.id)
   },
   methods: {
-    ...mapActions(useCounterStore, ['fetchDetail'])
+    ...mapActions(useCounterStore, ['fetchDetail', 'catchPoke']),
+    addpoke() {
+      const value = {
+        pokeImg: this.imgUrl + this.pokemonId + '.png',
+        pokeName: this.detail.name
+      }
+      this.catchPoke(value)
+    }
   },
   computed: {
-    ...mapWritableState(useCounterStore, ['detail', 'imgUrl', 'pokeId'])
+    ...mapWritableState(useCounterStore, ['detail', 'imgUrl', 'pokemonId'])
   }
 }
 </script>

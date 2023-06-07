@@ -6,7 +6,7 @@ export const useCounterStore = defineStore('counter', {
     baseUrl: 'http://localhost:3000',
     pokes: [],
     detail: [],
-    pokeId: '',
+    pokemonId: '',
     imgUrl:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/'
   }),
@@ -33,7 +33,7 @@ export const useCounterStore = defineStore('counter', {
           method: 'get'
         })
         this.detail = data
-        this.pokeId = id
+        this.pokemonId = id
         console.log(data)
       } catch (error) {
         console.log(error)
@@ -76,6 +76,23 @@ export const useCounterStore = defineStore('counter', {
             access_token:
               'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg2MTI4MDM5fQ.v_45DowTkgzsByW4UB1g9WzQW23LYMSmjo3JvIPcomg'
           }
+        })
+      } catch (error) {
+        console.log(error)
+      }
+    },
+
+    //catch Poke
+    async catchPoke(data) {
+      try {
+        const { response } = await axios({
+          url: this.baseUrl + '/addpokemon',
+          method: 'post',
+          headers: {
+            access_token:
+              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg2MTI4MDM5fQ.v_45DowTkgzsByW4UB1g9WzQW23LYMSmjo3JvIPcomg'
+          },
+          data: data
         })
       } catch (error) {
         console.log(error)
