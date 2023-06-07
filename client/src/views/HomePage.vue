@@ -64,198 +64,37 @@
         </a>
       </aside>
 
-      <div class="w-full p-4">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Expedita quam odit officiis magni
-        doloribus ipsa dolore, dolores nihil accusantium labore, incidunt autem iure quae vitae
-        voluptate, esse asperiores aliquam repellat. Harum aliquid non officiis porro at cumque
-        eaque inventore iure. Modi sunt optio mollitia repellat sed ab quibusdam quos harum!
+      <!-- card -->
+      <div
+        class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5"
+      >
+        <card v-for="poke in pokes" :key="poke.index" :pokes="poke" :imgUrl="imgUrl" />
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import card from '../components/card.vue'
+import { mapActions, mapWritableState } from 'pinia'
+import { useCounterStore } from '../stores/counter'
 export default {
   data() {
     return {
       asideOpen: true
     }
+  },
+  components: {
+    card
+  },
+  created() {
+    this.fetchHandler()
+  },
+  methods: {
+    ...mapActions(useCounterStore, ['fetchHandler'])
+  },
+  computed: {
+    ...mapWritableState(useCounterStore, ['pokes', 'imgUrl'])
   }
 }
 </script>

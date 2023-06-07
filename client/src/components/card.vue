@@ -1,31 +1,20 @@
 <template>
   <div
+    @click="handleDetail(pokes.entry_number)"
     class="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-900 dark:text-gray-100"
   >
-    <div class="flex space-x-4">
-      <div class="flex flex-col space-y-1">
-        <a rel="noopener noreferrer" href="#" class="text-sm font-semibold">{{ cuisine.name }}</a>
-      </div>
-    </div>
+    <div class="flex space-x-4"></div>
     <div>
       <img
-        :src="cuisine.imgUrl"
-        alt=""
+        :src="imgUrl + pokes.entry_number + '.png'"
         class="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
+        alt=""
       />
-      <h2 class="mb-1 text-xl font-semibold">{{ cuisine.price }}</h2>
-      <p class="text-sm dark:text-gray-400">
-        {{ cuisine.description }}
-      </p>
+      <h2 class="mb-1 text-xl font-semibold">{{ pokes.pokemon_species.name }}</h2>
     </div>
     <div class="flex flex-wrap justify-between">
       <div class="space-x-2">
-        <button
-          @click.prevent="bookmarkSubmit(cuisine.id)"
-          aria-label="Bookmark this post"
-          type="button"
-          class="p-2"
-        >
+        <button aria-label="Bookmark this post" type="button" class="p-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -38,11 +27,7 @@
         </button>
       </div>
       <div class="flex space-x-2 text-sm dark:text-gray-400">
-        <button
-          @click.prevent="detailSumbit(cuisine.id)"
-          type="button"
-          class="flex items-center p-1 space-x-1.5"
-        >
+        <button type="button" class="flex items-center p-1 space-x-1.5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -64,7 +49,19 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['pokes', 'imgUrl'],
+  data() {
+    return {
+      pokeName: ''
+    }
+  },
+  methods: {
+    handleDetail(id) {
+      console.log(id)
+    }
+  }
+}
 </script>
 
 <style></style>
