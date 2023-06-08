@@ -6,16 +6,15 @@
       <!-- Login form -->
       <div
         class="flex flex-wrap content-center justify-center rounded-l-md bg-white"
-        style="width: 30rem; height: 40rem"
+        style="width: 24rem; height: 32rem"
       >
         <div class="w-72">
           <!-- Heading -->
-          <h1 class="text-xl font-semibold">Welcome back</h1>
-          <small class="text-gray-400">Welcome back! Please enter your details</small>
+          <h1 class="text-xl font-semibold">Interested in Joining??</h1>
+          <small class="text-gray-400">Please input your data</small>
 
           <!-- Form -->
-
-          <form @submit.prevent="registerSumbit" class="mt-4">
+          <form class="mt-4" @submit.prevent="registerSumbit">
             <div class="mb-3">
               <label class="mb-2 block text-xs font-semibold">Email</label>
               <input
@@ -40,16 +39,26 @@
               <button
                 class="mb-1.5 block w-full text-center text-white bg-purple-700 hover:bg-purple-900 px-2 py-1.5 rounded-md"
               >
-                Sign in
+                Sign Up
               </button>
+              <googlelogin />
+              <!-- <button
+                  class="flex flex-wrap justify-center w-full border border-gray-300 hover:border-gray-500 px-2 py-1.5 rounded-md"
+                >
+                  <img
+                    class="w-5 mr-2"
+                    src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA"
+                  />
+                  Sign in with Google
+                </button> -->
             </div>
           </form>
 
           <!-- Footer -->
           <div class="text-center">
-            <span class="text-xs text-gray-400 font-semibold">have account?</span>
+            <span class="text-xs text-gray-400 font-semibold">Don't have account?</span>
             <router-link v-bind:to="'/login'" class="text-xs font-semibold text-purple-700"
-              >login</router-link
+              >Sign in</router-link
             >
           </div>
         </div>
@@ -61,8 +70,8 @@
         style="width: 24rem; height: 32rem"
       >
         <img
-          class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md"
-          src="https://i.imgur.com/9l1A4OS.jpeg"
+          class="w-flex h-full bg-center bg-no-repeat bg-cover rounded-r-md"
+          src="https://www.pokemon.com/static-assets/app/static3/img/og-default-image.jpeg"
         />
       </div>
     </div>
@@ -70,7 +79,26 @@
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'pinia'
+import { useCounterStore } from '../stores/counter'
+export default {
+  methods: {
+    ...mapActions(useCounterStore, ['registerHanlder']),
+    registerSumbit() {
+      const value = {
+        email: this.email,
+        password: this.password
+      }
+      this.registerHanlder(value)
+    }
+  },
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  }
+}
 </script>
 
 <style></style>

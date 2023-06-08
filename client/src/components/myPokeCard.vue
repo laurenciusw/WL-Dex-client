@@ -10,7 +10,7 @@
         class="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
         alt=""
       />
-      <h2 class="mb-1 text-xl font-semibold">{{ pokes.pokeName }}</h2>
+      <h2 class="mb-1 text-xl font-semibold">{{ formatName }}</h2>
     </div>
     <div class="flex flex-wrap justify-between">
       <div class="space-x-2"></div>
@@ -23,8 +23,10 @@ import { mapActions } from 'pinia'
 import { useCounterStore } from '../stores/counter'
 export default {
   props: ['pokes'],
-  data() {
-    return {}
+  computed: {
+    formatName() {
+      return this.pokes.pokeName.charAt(0).toUpperCase() + this.pokes.pokeName.slice(1)
+    }
   }
 }
 </script>

@@ -37,7 +37,10 @@
           </div>
 
           <div class="p-2">
-            <button class="flex items-center space-x-2 transition hover:text-blue-600">
+            <button
+              @click.prevent="dologout"
+              class="flex items-center space-x-2 transition hover:text-blue-600"
+            >
               <svg
                 class="h-4 w-4"
                 fill="none"
@@ -124,6 +127,9 @@ export default {
     prepare() {
       console.log(this.generateToken)
       this.generateToken()
+    },
+    dologout() {
+      localStorage.clear()
     }
   },
   computed: {

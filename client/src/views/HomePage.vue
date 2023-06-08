@@ -9,7 +9,11 @@
         <button type="button" class="text-3xl" @click="asideOpen = !asideOpen">
           <i class="bx bx-menu"></i>
         </button>
-        <div>Logo</div>
+        <img
+          src="https://w7.pngwing.com/pngs/427/428/png-transparent-pokemon-logo-pokemon-go-pikachu-logo-ash-ketchum-pokemon-go-text-banner-sign.png"
+          alt="plchldr.co"
+          class="h-9 w-20"
+        />
       </div>
       <div>
         <button
@@ -37,7 +41,10 @@
           </div>
 
           <div class="p-2">
-            <button class="flex items-center space-x-2 transition hover:text-blue-600">
+            <button
+              @click.prevent="dologout"
+              class="flex items-center space-x-2 transition hover:text-blue-600"
+            >
               <svg
                 class="h-4 w-4"
                 fill="none"
@@ -120,8 +127,14 @@ export default {
   methods: {
     ...mapActions(useCounterStore, ['fetchHandler', 'generateToken']),
     prepare() {
-      console.log(this.generateToken)
-      this.generateToken()
+      if (!localStorage.access_token) {
+        this.$router.push('/login')
+      } else {
+        this.generateToken()
+      }
+    },
+    dologout() {
+      localStorage.clear()
     }
   },
   computed: {

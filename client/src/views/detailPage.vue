@@ -42,7 +42,7 @@
             <a href="#" class="transition hover:text-blue-600">Settings</a>
           </div>
 
-          <div class="p-2">
+          <div @click.prevent="dologout" class="p-2">
             <button class="flex items-center space-x-2 transition hover:text-blue-600">
               <svg
                 class="h-4 w-4"
@@ -106,32 +106,35 @@
             <div class="ml-8">
               <div class="grid grid-cols-2">
                 <div>
-                  <h1 class="text-2xl font-bold">{{ detail.name }}</h1>
+                  <h1 class="text-2xl font-bold">{{ formatName }}</h1>
                   <!-- <p class="font-medium text-gray-700">{{ detail.Category.name }}</p> -->
                 </div>
               </div>
               <div class="font-medium text-gray-700 mt-3 mr-2 text-justify">
                 <h1>Pokemon Type :</h1>
               </div>
-              <div
-                v-for="types in detail.types"
-                :key="types.index"
-                class="bg-black hover:from-pink-600 hover:to-red-600 text-white font-bold py-2 px-4 rounded-full mr-4 w-20 mt-3"
-              >
-                <p>{{ types.type.name }}</p>
+              <div>
+                <div
+                  v-for="types in detail.types"
+                  :key="types.index"
+                  class="bg-black hover:from-pink-600 hover:to-red-600 text-white font-bold py-2 px-4 rounded-full mr-4 w-20 mt-3"
+                >
+                  <p>{{ types.type.name }}</p>
+                </div>
               </div>
+
               <div class="ml-14 mt-4" style="height: 170px; width: 170px"></div>
               <div>
                 <button
                   @click.prevent="addpoke"
-                  class="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold py-1 px-4 rounded-full shadow-lg mr-4 w-72 mt-3\ justify-center"
+                  class="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold py-1 px-4 rounded-full shadow-lg mr-4 w-72 mt-3\ justify-center flex gap-4 align-center"
                   @mouseover="hover = 'red'"
                   @mouseleave="hover = 'white'"
                 >
                   <svg
                     class="svg-icon"
-                    style="width: 1.5em; height: 2em; fill: currentColor; overflow: hidden"
-                    viewBox="100 100 800 600"
+                    style="width: 1.5em; height: 1.5em; fill: currentColor; overflow: hidden"
+                    viewBox="0 0 1024 1024"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -195,10 +198,16 @@ export default {
     },
     prepare() {
       this.generateToken()
+    },
+    dologout() {
+      localStorage.clear()
     }
   },
   computed: {
-    ...mapWritableState(useCounterStore, ['detail', 'imgUrl', 'pokemonId'])
+    ...mapWritableState(useCounterStore, ['detail', 'imgUrl', 'pokemonId']),
+    formatName() {
+      return this.detail.name.charAt(0).toUpperCase() + this.detail.name.slice(1)
+    }
   }
 }
 </script>

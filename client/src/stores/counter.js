@@ -4,7 +4,7 @@ import router from '../router'
 
 export const useCounterStore = defineStore('counter', {
   state: () => ({
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'https://wlhck.site',
     imgUrl:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/',
     pokes: [],
@@ -50,8 +50,7 @@ export const useCounterStore = defineStore('counter', {
           url: this.baseUrl + '/generate-token',
           method: 'post',
           headers: {
-            access_token:
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg2MTI4MDM5fQ.v_45DowTkgzsByW4UB1g9WzQW23LYMSmjo3JvIPcomg'
+            access_token: localStorage.access_token
           }
         })
 
@@ -59,7 +58,12 @@ export const useCounterStore = defineStore('counter', {
 
         window.snap.pay(reponse.data.token, {
           onSuccess: function (result) {
-            console.log('berhasil')
+            Swal.fire({
+              icon: 'success',
+              title: 'You are a member now!',
+              showConfirmButton: false,
+              timer: 1500
+            })
             cb()
           }
         })
@@ -75,8 +79,7 @@ export const useCounterStore = defineStore('counter', {
           url: this.baseUrl + '/subscribe',
           method: 'patch',
           headers: {
-            access_token:
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg2MTI4MDM5fQ.v_45DowTkgzsByW4UB1g9WzQW23LYMSmjo3JvIPcomg'
+            access_token: localStorage.access_token
           }
         })
       } catch (error) {
@@ -91,15 +94,23 @@ export const useCounterStore = defineStore('counter', {
           url: this.baseUrl + '/addpokemon',
           method: 'post',
           headers: {
-            access_token:
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg2MTI4MDM5fQ.v_45DowTkgzsByW4UB1g9WzQW23LYMSmjo3JvIPcomg'
+            access_token: localStorage.access_token
           },
           data: data
         })
         this.fetchMyPoke()
         this.router.push('/')
+        Swal.fire({
+          icon: 'success',
+          title: 'Success catch the Pokemon!!',
+          showConfirmButton: false,
+          timer: 1500
+        })
       } catch (error) {
-        console.log(error)
+        Swal.fire({
+          icon: 'error',
+          title: error.response.data.message
+        })
       }
     },
 
@@ -110,13 +121,49 @@ export const useCounterStore = defineStore('counter', {
           url: this.baseUrl + '/mypoke',
           method: 'get',
           headers: {
-            access_token:
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg2MTI4MDM5fQ.v_45DowTkgzsByW4UB1g9WzQW23LYMSmjo3JvIPcomg'
+            access_token: localStorage.access_token
           }
         })
         this.mypokes = data
       } catch (error) {
         console.log(error)
+      }
+    },
+
+    //handle login
+    async loginHandler(value) {
+      console.log(value)
+      try {
+        const { data } = await axios({
+          url: this.baseUrl + '/login',
+          method: 'post',
+          data: value
+        })
+        localStorage.access_token = data.access_token
+        this.router.push('/')
+      } catch (error) {
+        Swal.fire({
+          icon: 'error',
+          title: error.response.data.message
+        })
+      }
+    },
+
+    //handle register
+    async registerHanlder(value) {
+      console.log('masuk router')
+      try {
+        await axios({
+          url: this.baseUrl + '/register',
+          method: 'post',
+          data: value
+        })
+        this.router.push('/login')
+      } catch (error) {
+        Swal.fire({
+          icon: 'error',
+          title: error.response.data.message
+        })
       }
     }
   }
