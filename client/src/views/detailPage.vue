@@ -42,7 +42,7 @@
             <a href="#" class="transition hover:text-blue-600">Settings</a>
           </div>
 
-          <div class="p-2">
+          <div @click.prevent="dologout" class="p-2">
             <button class="flex items-center space-x-2 transition hover:text-blue-600">
               <svg
                 class="h-4 w-4"
@@ -67,43 +67,32 @@
     <!-- aside -->
     <div class="flex">
       <aside
-        class="flex w-72 flex-col space-y- border-r-2 border-gray-100 bg-white p-2"
+        class="flex w-72 flex-col space-y- border-r-2 border-gray-200 bg-white p-2"
         :class="{ hidden: !asideOpen }"
       >
         <a
+          @click.prevent="this.$router.push('/')"
           href="#"
           class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
         >
           <span class="text-2xl"><i class="bx bx-home"></i></span>
-          <span>Dashboard</span>
+          <span>Home</span>
         </a>
         <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-cart"></i></span>
-          <span>Cart</span>
-        </a>
-        <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-shopping-bag"></i></span>
-          <span>Shopping</span>
-        </a>
-        <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-heart"></i></span>
-          <span>My Favourite</span>
-        </a>
-        <a
+          @click="$router.push('/mypokepage')"
           href="#"
           class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
         >
           <span class="text-2xl"><i class="bx bx-user"></i></span>
-          <span>Profile</span>
+          <span>Trainer Account</span>
+        </a>
+        <a
+          @click.prevent="prepare"
+          href="#"
+          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
+        >
+          <span class="text-2xl"><i class="bx bx-captions"></i></span>
+          <span>Subscribe</span>
         </a>
       </aside>
 
@@ -117,32 +106,35 @@
             <div class="ml-8">
               <div class="grid grid-cols-2">
                 <div>
-                  <h1 class="text-2xl font-bold">{{ detail.name }}</h1>
+                  <h1 class="text-2xl font-bold">{{ formatName }}</h1>
                   <!-- <p class="font-medium text-gray-700">{{ detail.Category.name }}</p> -->
                 </div>
               </div>
               <div class="font-medium text-gray-700 mt-3 mr-2 text-justify">
                 <h1>Pokemon Type :</h1>
               </div>
-              <div
-                v-for="types in detail.types"
-                :key="types.index"
-                class="bg-black hover:from-pink-600 hover:to-red-600 text-white font-bold py-2 px-4 rounded-full mr-4 w-20 mt-3"
-              >
-                <p>{{ types.type.name }}</p>
+              <div>
+                <div
+                  v-for="types in detail.types"
+                  :key="types.index"
+                  class="bg-black hover:from-pink-600 hover:to-red-600 text-white font-bold py-2 px-4 rounded-full mr-4 w-20 mt-3"
+                >
+                  <p>{{ types.type.name }}</p>
+                </div>
               </div>
+
               <div class="ml-14 mt-4" style="height: 170px; width: 170px"></div>
               <div>
                 <button
                   @click.prevent="addpoke"
-                  class="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold py-1 px-4 rounded-full shadow-lg mr-4 w-72 mt-3\ justify-center"
+                  class="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-bold py-1 px-4 rounded-full shadow-lg mr-4 w-72 mt-3\ justify-center flex gap-4 align-center"
                   @mouseover="hover = 'red'"
                   @mouseleave="hover = 'white'"
                 >
                   <svg
                     class="svg-icon"
-                    style="width: 1.5em; height: 2em; fill: currentColor; overflow: hidden"
-                    viewBox="100 100 800 600"
+                    style="width: 1.5em; height: 1.5em; fill: currentColor; overflow: hidden"
+                    viewBox="0 0 1024 1024"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -196,17 +188,26 @@ export default {
     this.fetchDetail(this.$route.params.id)
   },
   methods: {
-    ...mapActions(useCounterStore, ['fetchDetail', 'catchPoke']),
+    ...mapActions(useCounterStore, ['fetchDetail', 'catchPoke', 'generateToken']),
     addpoke() {
       const value = {
         pokeImg: this.imgUrl + this.pokemonId + '.png',
         pokeName: this.detail.name
       }
       this.catchPoke(value)
+    },
+    prepare() {
+      this.generateToken()
+    },
+    dologout() {
+      localStorage.clear()
     }
   },
   computed: {
-    ...mapWritableState(useCounterStore, ['detail', 'imgUrl', 'pokemonId'])
+    ...mapWritableState(useCounterStore, ['detail', 'imgUrl', 'pokemonId']),
+    formatName() {
+      return this.detail.name.charAt(0).toUpperCase() + this.detail.name.slice(1)
+    }
   }
 }
 </script>

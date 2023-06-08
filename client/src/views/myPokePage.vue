@@ -9,11 +9,7 @@
         <button type="button" class="text-3xl" @click="asideOpen = !asideOpen">
           <i class="bx bx-menu"></i>
         </button>
-        <img
-          src="https://w7.pngwing.com/pngs/427/428/png-transparent-pokemon-logo-pokemon-go-pikachu-logo-ash-ketchum-pokemon-go-text-banner-sign.png"
-          alt="plchldr.co"
-          class="h-9 w-20"
-        />
+        <div>Logo</div>
       </div>
       <div>
         <button
@@ -101,16 +97,18 @@
       <div
         class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-10"
       >
-        <card v-for="poke in pokes" :key="poke.index" :pokes="poke" :imgUrl="imgUrl" />
+        <myPokeCard v-for="poke in mypokes" :key="poke.id" :pokes="poke" />
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import card from '../components/card.vue'
 import { mapActions, mapWritableState } from 'pinia'
 import { useCounterStore } from '../stores/counter'
+import myPokeCard from '../components/myPokeCard.vue'
+import router from '../router'
+
 export default {
   data() {
     return {
@@ -119,26 +117,23 @@ export default {
     }
   },
   components: {
-    card
+    myPokeCard
   },
   created() {
-    this.fetchHandler()
+    this.fetchMyPoke()
   },
   methods: {
-    ...mapActions(useCounterStore, ['fetchHandler', 'generateToken']),
+    ...mapActions(useCounterStore, ['generateToken', 'fetchMyPoke']),
     prepare() {
-      if (!localStorage.access_token) {
-        this.$router.push('/login')
-      } else {
-        this.generateToken()
-      }
+      console.log(this.generateToken)
+      this.generateToken()
     },
     dologout() {
       localStorage.clear()
     }
   },
   computed: {
-    ...mapWritableState(useCounterStore, ['pokes', 'imgUrl'])
+    ...mapWritableState(useCounterStore, ['mypokes'])
   }
 }
 </script>

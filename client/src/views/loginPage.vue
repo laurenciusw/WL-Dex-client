@@ -71,7 +71,7 @@
       >
         <img
           class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md"
-          src="https://i.imgur.com/9l1A4OS.jpeg"
+          src="https://m.media-amazon.com/images/I/71BO-lgtuVL.jpg"
         />
       </div>
     </div>
@@ -79,7 +79,26 @@
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'pinia'
+import { useCounterStore } from '../stores/counter'
+export default {
+  methods: {
+    ...mapActions(useCounterStore, ['loginHandler']),
+    loginSumbit() {
+      const value = {
+        email: this.email,
+        password: this.password
+      }
+      this.loginHandler(value)
+    }
+  },
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
+  }
+}
 </script>
 
 <style></style>
