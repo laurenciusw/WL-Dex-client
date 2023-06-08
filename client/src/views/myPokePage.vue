@@ -94,16 +94,18 @@
       <div
         class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-10"
       >
-        <card v-for="poke in pokes" :key="poke.index" :pokes="poke" :imgUrl="imgUrl" />
+        <myPokeCard v-for="poke in mypokes" :key="poke.id" :pokes="poke" />
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import card from '../components/card.vue'
 import { mapActions, mapWritableState } from 'pinia'
 import { useCounterStore } from '../stores/counter'
+import myPokeCard from '../components/myPokeCard.vue'
+import router from '../router'
+
 export default {
   data() {
     return {
@@ -112,20 +114,20 @@ export default {
     }
   },
   components: {
-    card
+    myPokeCard
   },
   created() {
-    this.fetchHandler()
+    this.fetchMyPoke()
   },
   methods: {
-    ...mapActions(useCounterStore, ['fetchHandler', 'generateToken']),
+    ...mapActions(useCounterStore, ['generateToken', 'fetchMyPoke']),
     prepare() {
       console.log(this.generateToken)
       this.generateToken()
     }
   },
   computed: {
-    ...mapWritableState(useCounterStore, ['pokes', 'imgUrl'])
+    ...mapWritableState(useCounterStore, ['mypokes'])
   }
 }
 </script>

@@ -67,43 +67,32 @@
     <!-- aside -->
     <div class="flex">
       <aside
-        class="flex w-72 flex-col space-y- border-r-2 border-gray-100 bg-white p-2"
+        class="flex w-72 flex-col space-y- border-r-2 border-gray-200 bg-white p-2"
         :class="{ hidden: !asideOpen }"
       >
         <a
+          @click.prevent="this.$router.push('/')"
           href="#"
           class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
         >
           <span class="text-2xl"><i class="bx bx-home"></i></span>
-          <span>Dashboard</span>
+          <span>Home</span>
         </a>
         <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-cart"></i></span>
-          <span>Cart</span>
-        </a>
-        <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-shopping-bag"></i></span>
-          <span>Shopping</span>
-        </a>
-        <a
-          href="#"
-          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-        >
-          <span class="text-2xl"><i class="bx bx-heart"></i></span>
-          <span>My Favourite</span>
-        </a>
-        <a
+          @click="$router.push('/mypokepage')"
           href="#"
           class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
         >
           <span class="text-2xl"><i class="bx bx-user"></i></span>
-          <span>Profile</span>
+          <span>Trainer Account</span>
+        </a>
+        <a
+          @click.prevent="prepare"
+          href="#"
+          class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
+        >
+          <span class="text-2xl"><i class="bx bx-captions"></i></span>
+          <span>Subscribe</span>
         </a>
       </aside>
 
@@ -196,13 +185,16 @@ export default {
     this.fetchDetail(this.$route.params.id)
   },
   methods: {
-    ...mapActions(useCounterStore, ['fetchDetail', 'catchPoke']),
+    ...mapActions(useCounterStore, ['fetchDetail', 'catchPoke', 'generateToken']),
     addpoke() {
       const value = {
         pokeImg: this.imgUrl + this.pokemonId + '.png',
         pokeName: this.detail.name
       }
       this.catchPoke(value)
+    },
+    prepare() {
+      this.generateToken()
     }
   },
   computed: {
